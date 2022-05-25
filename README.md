@@ -1,2 +1,2 @@
-## A release of MLflow in Docker for Kubernetes
+## A Release of MLflow in Docker for Kubernetes
 

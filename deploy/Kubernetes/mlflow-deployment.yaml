@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: mlflow-deployment
+  namespace: mlflow-k8s
+  labels:
+    app: mlflow
+spec: 
+  replicas: 1
+  

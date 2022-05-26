@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mlflow-deployment
@@ -19,13 +19,13 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8001
-            env:
-              - name:  BACKEND_URI
-                value: "sqlite:////mlflow/mlflow.db"
-              - name:  ARTIFACT_ROOT
-                value: "/mlflow/artifacts"
-              - name:  NUMBER_OF_GC
-                value: 4
-              - name: BACK_END_PORT
-                value: 8001
+          env:
+            - name:  BACKEND_URI
+              value: "sqlite:////mlflow/mlflow.db"
+            - name:  ARTIFACT_ROOT
+              value: "/mlflow/artifacts"
+            - name:  NUMBER_OF_GC
+              value: "4"
+            - name: BACK_END_PORT
+              value: "8001"
               

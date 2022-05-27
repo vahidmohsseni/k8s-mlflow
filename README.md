@@ -42,6 +42,18 @@ curl $MLFLOW_IP:8001
 ```
 
 ## Auto Deploy
+Run the `build.sh` to deploy the application on the kubernetes. 
 
-## Helm Charts
-
+```shell
+chmod +x build.sh
+./build.sh
+```
+The output will look like as following:
+```shell
+namespace/mlflow-k8s created
+deployment.apps/mlflow created
+service/mlflow created
+Waiting fot the deployment to be available ...
+deployment.apps/mlflow condition met
+MLFlow service is running on: 10.100.79.201:8001
+```

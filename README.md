@@ -1,5 +1,9 @@
 ## A Release of MLflow Tracking Server in Docker for Kubernetes
 
+## Redis
+Redis is required component for the FEAST online store. 
+Open the `redis-feast` directory for more information and instruction. 
+
 ## Manual
 To deploy the MLFlow in the Kubernetes cluster you need to, first, build the Docker image and push it to a registery accessible by your cluster.
 

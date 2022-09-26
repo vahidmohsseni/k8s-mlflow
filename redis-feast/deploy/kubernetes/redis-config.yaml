@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: redis-config
+  namespace: redis-feast
+data:
+  redis-config: |
+    maxmemory 1gb
+    maxmemory-policy allkeys-lru 
